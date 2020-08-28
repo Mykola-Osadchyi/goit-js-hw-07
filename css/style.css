@@ -1,0 +1,24 @@
+* {
+  margin-bottom: 10px;
+}
+
+/* ! Задание 3 */
+#gallery {
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  list-style: none;
+}
+
+/* ! Задание 6 */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
