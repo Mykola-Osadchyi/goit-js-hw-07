@@ -26,22 +26,21 @@ function createBoxes(amount) {
   amount = inputRef.value;
   let boxNumber = 0;
   let boxSideSize = 30;
+  const boxList = document.createElement('div');
   do {
     const box = document.createElement('div');
-    boxesRef.appendChild(box);
+    boxList.appendChild(box);
     boxNumber += 1;
     box.style.width = `${boxSideSize}px`;
     box.style.height = `${boxSideSize}px`;
     boxSideSize += 10;
     box.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
   } while (boxNumber < amount);
+  boxesRef.append(...boxList.children);
 };
 
 function removeBoxes() {
-  do {
-    const div = boxesRef.querySelector('div');
-    div.remove();
-  } while (boxesRef.childElementCount !== 0)
+  boxesRef.innerHTML = '';
 };
 
 function randomColor() { 

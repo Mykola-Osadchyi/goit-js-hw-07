@@ -30,13 +30,13 @@ const images = [
 const photoList = document.querySelector('#gallery');
 
 const doTagList = image => {
-  const TegImg = document.createElement('img');
-  TegImg.setAttribute("src", image.url);
-  TegImg.setAttribute("alt", image.alt);
-  TegImg.setAttribute("width", "420");
-  TegImg.setAttribute("height", "280");
+  const tagImg = document.createElement('img');
+  tagImg.setAttribute("src", image.url);
+  tagImg.setAttribute("alt", image.alt);
+  tagImg.setAttribute("width", "420");
+  tagImg.setAttribute("height", "280");
   const galleryItem = document.createElement('li');
-  galleryItem.appendChild(TegImg);
+  galleryItem.appendChild(tagImg);
   return galleryItem;
 }
 
